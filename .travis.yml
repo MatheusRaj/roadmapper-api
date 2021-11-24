@@ -3,6 +3,8 @@ node_js:
   - node
   - 16.0.0
 sudo: false
+before_script:
+  - ls -la
 install:
   - yarn
 jobs:
