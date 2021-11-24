@@ -4,9 +4,10 @@ node_js:
   - 16.0.0
 sudo: false
 before_script:
-  - cat package.json
-install:
-  - yarn add japa execa get-port@5.1.1
+  - yarn
+  - yarn build
+script:
+  - yarn test
 jobs:
   include:
     - stage: deploy to roadmapper
