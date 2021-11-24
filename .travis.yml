@@ -4,10 +4,9 @@ node_js:
   - 16.0.0
 sudo: false
 before_script:
-  - cat package.json
+  - ls -la
   - yarn
   - node ace --help
-  - yarn build
 script:
   - yarn test
 jobs:
