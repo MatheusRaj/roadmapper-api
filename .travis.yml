@@ -5,8 +5,6 @@ node_js:
 sudo: false
 install:
   - yarn
-after_script:
-  - yarn test
 jobs:
   include:
     - stage: deploy to roadmapper
