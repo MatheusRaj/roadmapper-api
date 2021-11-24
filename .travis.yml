@@ -4,7 +4,7 @@ node_js:
   - 16.0.0
 sudo: false
 before_script:
-  - ls -la
+  - cat package.json
 install:
   - yarn
 jobs:
