@@ -6,7 +6,7 @@ sudo: false
 before_script:
   - cat package.json
 install:
-  - yarn
+  - yarn add japa execa get-port@5.1.1
 jobs:
   include:
     - stage: deploy to roadmapper
