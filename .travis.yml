@@ -1,3 +1,19 @@
 language: node_js
 node_js:
-  - 14
+  - node
+  - 14.0.0
+sudo: false
+install:
+  - yarn
+after_script:
+  - yarn test
+jobs:
+  include:
+    - stage: deploy to roadmapper
+      script: skip
+      deploy: &heroku
+        provider: heroku
+        app: roadmapper-api
+        api_key: c02da744-af88-4212-b604-03dfc53f761e
+    - stage: test staging
+      script: 'curl https://roadmapper-api.herokuapp.com/'
